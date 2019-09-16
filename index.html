@@ -7,11 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>地府管理系统</title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
   <!-- 主要内容开始 -->
   <div class="df_body">
+    <h2 class="df_dfgl">地府管理系统: 实时数据</h2>
     <!-- 上方数据展示窗口开始 -->
     <div class="df_show_list">
       <!-- 单个展示窗口开始 -->
@@ -22,7 +24,7 @@
           <span class="df_show_tet">地府人数</span>
           <br>
           <!-- 底部文字 -->
-          <span class="df_show_teb">30000</span>
+          <span class="df_show_teb" id="df_show_rs">30000</span>
         </div>
       </div>
       <div class="df_show_one df_show_one2">
@@ -32,7 +34,7 @@
           <span class="df_show_tet">今日入境</span>
           <br>
           <!-- 底部文字 -->
-          <span class="df_show_teb">900</span>
+          <span class="df_show_teb" id="df_show_rj">900</span>
         </div>
       </div>
     </div>
@@ -201,6 +203,7 @@
     </div>
   </div>
   <!-- 底部导航栏结束 -->
+  <script src="js/index.js"></script>
 </body>
 
 </html>
