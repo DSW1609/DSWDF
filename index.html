@@ -12,9 +12,25 @@
 
 <body>
   <!-- 主要内容开始 -->
-  <div class="df_body">
+  <!-- 首页 -->
+  <div class="df_body df_body1" style="display:block">
     <!-- 首页大图开始 -->
     <div class="df_bg">
+      <!-- 公告框开始 -->
+      <div class="df_gg">
+        <!-- 左侧公告logo -->
+        <div class="df_gg_lo">
+          <img src="images/df_gg.png" alt="">
+        </div>
+        <!-- 右侧文字显示栏 -->
+        <div class="df_gg_te">
+          <!-- 内部文字横向滚动栏 -->
+          <div class="df_gg_th">
+            <span id="df_gd_te"></span>
+          </div>
+        </div>
+      </div>
+      <!-- 公告框结束 -->
     </div>
     <!-- 首页大图结束 -->
     <!-- 上方数据展示窗口开始 -->
@@ -155,20 +171,33 @@
     </div>
     <!-- 常用功能结束 -->
   </div>
+  <!-- 首页结束 -->
+  <!-- 生死簿开始 -->
+  <div class="df_body df_body2">
+  </div>
+  <!-- 生死簿结束 -->
+  <!-- 审判庭开始 -->
+  <div class="df_body df_body3">
+  </div>
+  <!-- 审判庭结束 -->
+  <!-- 轮回开始 -->
+  <div class="df_body df_body4">
+  </div>
+  <!-- 轮回结束 -->
   <!-- 主要内容结束 -->
   <!-- 底部导航栏开始 -->
   <div class="df_nav_btm">
     <!-- 单个导航按钮 -->
-    <div class="nav_btm_one">
+    <div class="nav_btm_one" data-index="0">
       <!-- 上方按钮logo -->
       <div class="nav_btm_logo btm_logo_1">
       </div>
       <!-- 下方文字 -->
       <div class="nav_btm_te">
-        <span>首页</span>
+        <span class="btm_te_fff">首页</span>
       </div>
     </div>
-    <div class="nav_btm_one">
+    <div class="nav_btm_one" data-index="1">
       <!-- 上方按钮logo -->
       <div class="nav_btm_logo btm_logo_2">
       </div>
@@ -177,7 +206,7 @@
         <span>生死簿</span>
       </div>
     </div>
-    <div class="nav_btm_one">
+    <div class="nav_btm_one" data-index="2">
       <!-- 上方按钮logo -->
       <div class="nav_btm_logo btm_logo_3">
       </div>
@@ -186,7 +215,7 @@
         <span>审判庭</span>
       </div>
     </div>
-    <div class="nav_btm_one" style="border: none">
+    <div class="nav_btm_one" data-index="3" style="border: none">
       <!-- 上方按钮logo -->
       <div class="nav_btm_logo btm_logo_4">
       </div>
@@ -207,6 +236,7 @@
       <!-- 姓名输入框 -->
       <div class="use_cx_name">
         <input type="text" class="cx_name_i" id="cx_name" placeholder="姓名">
+        <div class="cx_name_t"></div>
       </div>
       <!-- 性别输入框 -->
       <div class="use_cx_name use_cx_sex">
@@ -233,11 +263,11 @@
       <!-- 下方倒计时效果开始 -->
       <div class="use_cx_sj">
         <h3 class="use_cx_h3">寿命大约还有</h3>
-        <span>100 年 10月</span>
+        <span>100 年 10月 10 天</span>
         <br>
-        <span id="cx_hours">10</span><span>天</span>
-        <span id="cx_minutes">10</span><span>分</span>
-        <span id="cx_seconds">10</span><span>秒</span>
+        <span id="cx_hours">10</span><span> 时</span>
+        <span id="cx_minutes">10</span><span> 分</span>
+        <span id="cx_seconds">10</span><span> 秒</span>
       </div>
       <!-- 下方倒计时效果结束 -->
       <!-- 底部返回按钮开始 -->

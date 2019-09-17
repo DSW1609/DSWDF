@@ -6,8 +6,22 @@ body {
 
 .df_body {
   position: relative;
+  float: left;
   width: 100%;
   height: 700px;
+  display: none;
+}
+
+.df_body2 {
+  background: green;
+}
+
+.df_body3 {
+  background: red;
+}
+
+.df_body4 {
+  background: yellow;
 }
 
 .df_bg {
@@ -21,6 +35,47 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   box-shadow: 0px 0px 20px #ccc;
+}
+
+.df_gg {
+  position: relative;
+  width: 66%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+  top: 73%;
+  border-radius: 20px;
+}
+
+.df_gg_lo {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+}
+
+.df_gg_lo img {
+  width: 80%;
+  height: 100%;
+  margin-left: 15%;
+}
+
+.df_gg_te {
+  position: absolute;
+  width: 80%;
+  left: 20%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.df_gg_th {
+  position: relative;
+  width: 150%;
+  height: 80%;
+  left: 100%;
+  top: 13%;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #000;
 }
 
 .df_show_list {
@@ -123,15 +178,34 @@ body {
   background-position: center;
 }
 
+.nav_btm_logo:hover {
+  animation: btm_logo 0.2s;
+}
+
+@keyframes btm_logo {
+  from {
+    background-size: 22px;
+  }
+
+  to {
+    background-size: 23px;
+  }
+}
+
 .nav_btm_te {
   position: relative;
   width: 100%;
   height: 30%;
   top: 12%;
-  color: #fff;
+  color: #ccc;
   margin: 0 auto;
   font-size: 12px;
+  font-weight: bold;
   text-align: center;
+}
+
+.btm_te_fff {
+  color: #fff;
 }
 
 .df_use {
@@ -287,12 +361,13 @@ body {
   font-size: 20px;
   outline: none;
 }
-.cx_name_t{
+
+.cx_name_t {
   position: relative;
   float: right;
   width: 10%;
   height: 70%;
-  top:15%;
+  top: 15%;
   right: 10%;
   opacity: 0;
   transition: 0.2s;
@@ -301,6 +376,7 @@ body {
   background-repeat: no-repeat;
   background-size: 110%;
 }
+
 .use_cx_sex {
   top: 8%;
 }
@@ -317,11 +393,8 @@ body {
   font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
-}
-
-.use_cx_bt:hover {
-  width: 55%;
-  transition: 0.2s steps(60);
+  border: none;
+  transition: 0.2s;
 }
 
 .use_cx_h1,
@@ -330,9 +403,11 @@ body {
   text-align: center;
   margin: 0;
 }
-.use_cx_h3{
+
+.use_cx_h3 {
   margin: 4%;
 }
+
 #cx_d span {
   font-size: 20px;
 }
@@ -378,12 +453,13 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
-.use_fh_bt{
+
+.use_fh_bt {
   position: relative;
   float: left;
   width: 10%;
   height: 10%;
-  top:70%;
+  top: 70%;
   color: #000;
   margin-left: 20%;
   left: 10%;
@@ -394,6 +470,7 @@ body {
   background-size: 110%;
   box-shadow: 0px 0px 10px #ccc;
 }
-.use_gb_bt{
+
+.use_gb_bt {
   background-image: url(../images/use_gb.png);
 }

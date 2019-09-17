@@ -18,12 +18,15 @@ var use_cx = document.querySelector("#use_cx");
 var use_cx_mk = document.querySelector(".use_cx");
 var use_gb_bt = document.querySelector(".use_gb_bt");
 var use_fh_bt = document.querySelector(".use_fh_bt");
+// 查询寿命点击事件
 use_cx.addEventListener('click', function() {
   use_cx_mk.style.height = "50%";
 })
+// 查询模块移出事件
 use_cx_mk.addEventListener('mouseleave', function() {
   cx_body_gb();
 })
+// 关闭按钮点击事件
 use_gb_bt.addEventListener('click', function() {
   cx_body_gb();
 })
@@ -50,12 +53,85 @@ var cx_body = document.querySelector(".use_cx_body");
 var cx_body2 = document.querySelector(".use_cx_body2");
 var cx_name_v = document.querySelector("#cx_name_v");
 var cx_sex_v = document.querySelector("#cx_sex_v");
+// 判断用户输入性别是否合法
+var cx_name_t = document.querySelectorAll(".cx_name_t");
 cx_bt.addEventListener('click', function() {
-  cx_body.style.left = "-100%";
-  cx_body2.style.left = "10%";
-  use_cx_mk.style.height = "60%";
-  cx_name_v.innerHTML = cx_name.value;
-  cx_sex_v.innerHTML = cx_sex.value;
+  if (cx_name.value == "") {
+    cx_name_t[0].style.opacity = "1";
+    cx_bt.style.background = "#d81f07";
+  } else {
+    cx_name_t[0].style.opacity = "0";
+    cx_bt.style.background = "#000";
+  }
+  if (cx_sex.value == "男" || cx_sex.value == "女") {
+    if (cx_name.value == "") {
+      return false;
+    }
+    cx_name_t[1].style.opacity = "0";
+    cx_bt.style.background = "#000";
+    cx_body.style.left = "-100%";
+    cx_body2.style.left = "10%";
+    use_cx_mk.style.height = "60%";
+    cx_name_v.innerHTML = cx_name.value;
+    cx_sex_v.innerHTML = cx_sex.value;
+  } else {
+    cx_name_t[1].style.opacity = "1";
+    cx_bt.style.background = "#d81f07";
+    return false;
+  }
 })
 // 调用倒计时函数
 TimeDown("#cx_hours", "#cx_minutes", "#cx_seconds", "2019-9-17 24:00:00");
+// 顶部公告滚动事件
+var df_gg_th = document.querySelector(".df_gg_th");
+var df_gd_te = document.querySelector("#df_gd_te");
+// 创建数组板寸公告信息
+var gd_te_arr = ['公告：今天地府天气晴,气温30°C', '公告：本网站纯属娱乐,切勿当真']
+window.addEventListener('load', function() {
+  // 优先调用一次滚动函数
+  df_gd()
+  setInterval(function() {
+    df_gd()
+  }, 7100)
+})
+// 创建一个变量，用来输出数组内的内容
+var gd_count = 0;
+// 滚动函数
+function df_gd() {
+  df_gg_th.style.transition = "7s linear";
+  df_gg_th.style.left = "-130%";
+  df_gd_te.innerHTML = gd_te_arr[gd_count];
+  gd_count++;
+  if (gd_count == gd_te_arr.length) {
+    gd_count = 0;
+  }
+  setTimeout(function() {
+    if (df_gg_th.style.left == "-130%") {
+      df_gg_th.style.transition = "0s linear";
+      df_gg_th.style.left = "100%";
+    }
+  }, 7000)
+}
+// 底部导航栏点击切换事件
+var nav_btm_one = document.querySelectorAll(".nav_btm_one");
+var df_body = document.querySelectorAll(".df_body");
+var btm_te_fff = document.querySelector(".df_nav_btm").querySelectorAll("span");
+// 循环注册点击事件
+for (var i = 0; i < nav_btm_one.length; i++) {
+  nav_btm_one[i].addEventListener("click", function() {
+    // 得到当前点击的自定义属性
+    var nav_btm_index = this.getAttribute("data-index");
+    // 首先隐藏所有的df_body
+    for (var i = 0; i < df_body.length; i++) {
+      df_body[i].style.display = "none";
+    }
+    // 根据自定义属性显示对应的df_body
+    df_body[nav_btm_index].style.display = "block";
+    // 清除所有的btm_te_fff类名
+    for (var i = 0; i < btm_te_fff.length; i++) {
+      btm_te_fff[i].classList.remove("btm_te_fff");
+    }
+    // 根据自定义属性给对应的按钮添加类名
+    btm_te_fff[nav_btm_index].classList.add("btm_te_fff");
+  })
+}
