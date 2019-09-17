@@ -27,7 +27,7 @@
           <span class="df_show_tet">地府人数</span>
           <br>
           <!-- 底部文字 -->
-          <span class="df_show_teb" id="df_show_rs">30000</span>
+          <span class="df_show_teb" id="df_show_rs">58660</span>
         </div>
       </div>
       <div class="df_show_one df_show_one2">
@@ -37,7 +37,7 @@
           <span class="df_show_tet">今日入境</span>
           <br>
           <!-- 底部文字 -->
-          <span class="df_show_teb" id="df_show_rj">900</span>
+          <span class="df_show_teb" id="df_show_rj">283</span>
         </div>
       </div>
     </div>
@@ -179,16 +179,16 @@
     </div>
     <div class="nav_btm_one">
       <!-- 上方按钮logo -->
-      <div class="nav_btm_logo btm_logo_4">
+      <div class="nav_btm_logo btm_logo_3">
       </div>
       <!-- 下方文字 -->
       <div class="nav_btm_te">
         <span>审判庭</span>
       </div>
     </div>
-    <div class="nav_btm_one">
+    <div class="nav_btm_one" style="border: none">
       <!-- 上方按钮logo -->
-      <div class="nav_btm_logo btm_logo_5">
+      <div class="nav_btm_logo btm_logo_4">
       </div>
       <!-- 下方文字 -->
       <div class="nav_btm_te">
@@ -211,25 +211,50 @@
       <!-- 性别输入框 -->
       <div class="use_cx_name use_cx_sex">
         <input type="text" class="cx_name_i" id="cx_sex" placeholder="男/女">
+        <div class="cx_name_t"></div>
       </div>
       <!-- 查询按钮 -->
-      <div class="use_cx_name use_cs_bt" id="cx_bt">
+      <div class="use_cx_name use_cx_bt" id="cx_bt">
         <span>查询</span>
       </div>
     </div>
-    <!-- 点击查询划出隐藏界面 -->
+    <!-- 点击查询右侧划出隐藏界面 -->
     <div class="use_cx_body use_cx_body2">
-      <h2 class="use_cx_h3">欢迎使用地府管理系统</h2>
+      <!-- 提示标题 -->
+      <h2 class="use_cx_h2">欢迎使用地府管理系统</h2>
+      <!-- 两个圆形矩角框开始 -->
       <div class="cx_d">
         <span>姓名：</span><span id="cx_name_v">xxx</span>
       </div>
       <div class="cx_d cx_sex_d">
         <span>性别：</span><span id="cx_sex_v">x</span>
       </div>
+      <!-- 两个圆形矩角框结束 -->
+      <!-- 下方倒计时效果开始 -->
+      <div class="use_cx_sj">
+        <h3 class="use_cx_h3">寿命大约还有</h3>
+        <span>100 年 10月</span>
+        <br>
+        <span id="cx_hours">10</span><span>天</span>
+        <span id="cx_minutes">10</span><span>分</span>
+        <span id="cx_seconds">10</span><span>秒</span>
+      </div>
+      <!-- 下方倒计时效果结束 -->
+      <!-- 底部返回按钮开始 -->
+      <div class="use_fh_bt">
+      </div>
+      <!-- 底部返回按钮结束 -->
+      <!-- 底部关闭按钮开始 -->
+      <div class="use_gb_bt use_fh_bt">
+      </div>
+      <!-- 底部关闭按钮结束 -->
     </div>
     <!-- 下方主体内容结束 -->
   </div>
   <!-- 查询寿命模块结束 -->
+
+  <!-- 引入JS -->
+  <script src="js/NoticeTime.js"></script>
   <script src="js/index.js"></script>
 </body>
 

@@ -15,6 +15,7 @@ body {
   width: 90%;
   height: 20%;
   margin: 0 auto;
+  top: 1%;
   border-radius: 20px;
   background-image: url(../images/df_bg_b.jpg);
   background-repeat: no-repeat;
@@ -26,7 +27,7 @@ body {
   position: relative;
   width: 100%;
   height: 150px;
-  top: 5px;
+  top: 1%;
   margin: 0 auto;
 }
 
@@ -75,7 +76,7 @@ body {
 .df_nav_btm {
   position: fixed;
   width: 100%;
-  height: 60px;
+  height: 50px;
   left: 0;
   bottom: 0;
   margin: 0;
@@ -88,10 +89,11 @@ body {
 .nav_btm_one {
   position: relative;
   float: left;
-  width: 23%;
+  width: 25%;
   height: 100%;
-  margin-left: 2%;
-  left: -1%;
+  border-right: 1px solid;
+  border-image: linear-gradient(black, white, black)3 4 3;
+  box-sizing: border-box;
 }
 
 .btm_logo_1 {
@@ -103,14 +105,10 @@ body {
 }
 
 .btm_logo_3 {
-  background-image: url(../images/df_nav_gh.png);
-}
-
-.btm_logo_4 {
   background-image: url(../images/df_nav_sp.png);
 }
 
-.btm_logo_5 {
+.btm_logo_4 {
   background-image: url(../images/df_nav_lh.png);
 }
 
@@ -118,9 +116,9 @@ body {
   position: relative;
   width: 40%;
   height: 50%;
-  top: 10%;
+  top: 6%;
   background-repeat: no-repeat;
-  background-size: 27px;
+  background-size: 22px;
   margin: 0 auto;
   background-position: center;
 }
@@ -132,16 +130,7 @@ body {
   top: 12%;
   color: #fff;
   margin: 0 auto;
-  text-align: center;
-}
-
-.df_dfgl {
-  position: relative;
-  top: 5px;
-  letter-spacing: 1px;
-  margin: 10px;
-  padding: 0;
-  font-size: 22px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -242,9 +231,9 @@ body {
   position: fixed;
   width: 100%;
   height: 0%;
-  bottom: 60px;
+  bottom: 50px;
   left: 0;
-  transition: all 0.5s steps(60);
+  transition: all 0.3s steps(60);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0px 0px 20px #ccc;
@@ -298,12 +287,25 @@ body {
   font-size: 20px;
   outline: none;
 }
-
+.cx_name_t{
+  position: relative;
+  float: right;
+  width: 10%;
+  height: 70%;
+  top:15%;
+  right: 10%;
+  opacity: 0;
+  transition: 0.2s;
+  background-image: url(../images/cx_gb.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
 .use_cx_sex {
   top: 8%;
 }
 
-.use_cs_bt {
+.use_cx_bt {
   position: relative;
   width: 50%;
   height: 50px;
@@ -317,17 +319,21 @@ body {
   text-align: center;
 }
 
-.use_cs_bt:hover {
+.use_cx_bt:hover {
   width: 55%;
   transition: 0.2s steps(60);
 }
 
+.use_cx_h1,
+.use_cx_h2,
 .use_cx_h3 {
   text-align: center;
   margin: 0;
 }
-
-.use_cx_body2 span {
+.use_cx_h3{
+  margin: 4%;
+}
+#cx_d span {
   font-size: 20px;
 }
 
@@ -344,7 +350,7 @@ body {
   background: #fff;
   margin-left: 5%;
   left: -2%;
-  top:6%;
+  top: 6%;
   padding: 0px 6px;
   border: 1px solid #242f44;
   border-radius: 20px;
@@ -354,4 +360,40 @@ body {
 
 .cx_sex_d {
   width: 30%;
+}
+
+.use_cx_sj {
+  position: absolute;
+  width: 100%;
+  height: 53%;
+  top: 41%;
+  background: #000;
+  color: #fff;
+  box-shadow: 0px 0px 2px #ccc;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.use_cx_sj span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.use_fh_bt{
+  position: relative;
+  float: left;
+  width: 10%;
+  height: 10%;
+  top:70%;
+  color: #000;
+  margin-left: 20%;
+  left: 10%;
+  border-radius: 50%;
+  background-image: url(../images/use_fh.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.use_gb_bt{
+  background-image: url(../images/use_gb.png);
 }
