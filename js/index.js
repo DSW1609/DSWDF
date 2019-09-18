@@ -18,9 +18,13 @@ var use_cx = document.querySelector("#use_cx");
 var use_cx_mk = document.querySelector(".use_cx");
 var use_gb_bt = document.querySelector(".use_gb_bt");
 var use_fh_bt = document.querySelector(".use_fh_bt");
+// 获取上方logo设置上移事件
+var use_cx_im = document.querySelector(".use_cx_im");
+
 // 查询寿命点击事件
 use_cx.addEventListener('click', function() {
-  use_cx_mk.style.height = "50%";
+  use_cx_mk.style.height = "40%";
+  use_cx_im.style.top = "-20px";
 })
 // 查询模块移出事件
 use_cx_mk.addEventListener('mouseleave', function() {
@@ -34,7 +38,7 @@ use_gb_bt.addEventListener('click', function() {
 use_fh_bt.addEventListener('click', function() {
   cx_body.style.left = "0%";
   cx_body2.style.left = "110%";
-  use_cx_mk.style.height = "50%";
+  use_cx_mk.style.height = "40%";
 })
 // 关闭调用函数
 function cx_body_gb() {
@@ -44,6 +48,7 @@ function cx_body_gb() {
   // 清空文本框的内容
   cx_name.value = "";
   cx_sex.value = "";
+  use_cx_im.style.top = "0px";
 }
 // 查询寿命按钮点击事件
 var cx_name = document.querySelector("#cx_name");
@@ -81,13 +86,13 @@ cx_bt.addEventListener('click', function() {
   }
 })
 // 调用倒计时函数
-TimeDown("#cx_hours", "#cx_minutes", "#cx_seconds", "2019-9-17 24:00:00");
+TimeDown("#cx_hours", "#cx_minutes", "#cx_seconds", "2019-9-18 24:00:00");
 // 顶部公告滚动事件
 var df_gg_th = document.querySelector(".df_gg_th");
 var df_gd_te = document.querySelector("#df_gd_te");
 // 创建数组板寸公告信息
-var gd_te_arr = ['公告：今天地府天气晴,气温30°C', '公告：本网站纯属娱乐,切勿当真']
-window.addEventListener('load', function() {
+var gd_te_arr = ['公告：今天地府天气晴,气温75°C', '公告：本网站纯属娱乐,切勿当真']
+window.addEventListener('DOMContentLoaded', function() {
   // 优先调用一次滚动函数
   df_gd()
   setInterval(function() {
@@ -135,3 +140,26 @@ for (var i = 0; i < nav_btm_one.length; i++) {
     btm_te_fff[nav_btm_index].classList.add("btm_te_fff");
   })
 }
+// 入境管理按钮点击事件
+// 获得入境管理按钮
+var use_rj = document.querySelector("#use_rj");
+// 获得入境管理弹出模块
+var use_rj_mk = document.querySelector(".use_rj")
+// 获得上方logo
+var use_rj_im = document.querySelector(".use_rj_im");
+// 设置点击事件
+use_rj.addEventListener("click", function() {
+  use_rj_mk.style.height = "80%";
+  use_rj_im.style.top = "-20px";
+})
+// 设置移出事件
+use_rj_mk.addEventListener("mouseleave", function() {
+  use_rj_mk.style.height = "0%";
+  use_rj_im.style.top = "0px";
+})
+// 入境模块点击关闭事件
+var use_rj_gb = document.querySelector(".use_rj_gb");
+use_rj_gb.addEventListener("click", function() {
+  use_rj_mk.style.height = "0%";
+  use_rj_im.style.top = "0px";
+})

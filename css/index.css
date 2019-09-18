@@ -138,7 +138,6 @@ body {
   padding: 0;
   background: #000;
   z-index: 999;
-  border-top: 1px solid #ccc;
 }
 
 .nav_btm_one {
@@ -319,7 +318,8 @@ body {
   width: 60px;
   height: 60px;
   margin: 0 auto;
-  top: 10px;
+  background-color: #fff;
+  border-radius: 30px;
   background-image: url(../images/df_use_sm.png);
   background-size: 60px;
   background-position: center;
@@ -329,8 +329,8 @@ body {
   position: relative;
   width: 80%;
   height: 70%;
-  top: 8%;
   left: 0%;
+  top: -4%;
   transition: 0.3s steps(60);
   margin: 0 auto;
 }
@@ -344,22 +344,26 @@ body {
 .use_cx_name {
   position: relative;
   width: 80%;
-  height: 20%;
+  height: 25%;
   background: #fff;
   margin: 0 auto;
-  border-radius: 50px;
-  border: 1px solid #242f44;
+  border-radius: 25px;
+  border: 1px solid #000;
 }
 
 .cx_name_i {
   position: relative;
-  width: 80%;
+  width: 70%;
   height: 90%;
   border: none;
   top: 3%;
   left: 10%;
   font-size: 20px;
   outline: none;
+}
+
+.cx_name_ix {
+  text-align: center;
 }
 
 .cx_name_t {
@@ -378,7 +382,7 @@ body {
 }
 
 .use_cx_sex {
-  top: 8%;
+  top: 10%;
 }
 
 .use_cx_bt {
@@ -386,7 +390,7 @@ body {
   width: 50%;
   height: 50px;
   line-height: 50px;
-  top: 20%;
+  top: 25%;
   background: black;
   color: #fff;
   font-weight: bold;
@@ -405,11 +409,12 @@ body {
 }
 
 .use_cx_h3 {
-  margin: 4%;
+  margin: 5%;
 }
 
-#cx_d span {
-  font-size: 20px;
+.use_cx_h2 {
+  position: relative;
+  top: -30px;
 }
 
 #cx_name_v,
@@ -425,12 +430,13 @@ body {
   background: #fff;
   margin-left: 5%;
   left: -2%;
-  top: 6%;
+  top: -5%;
   padding: 0px 6px;
   border: 1px solid #242f44;
   border-radius: 20px;
   text-align: center;
   line-height: 50px;
+  font-size: 20px;
 }
 
 .cx_sex_d {
@@ -440,8 +446,8 @@ body {
 .use_cx_sj {
   position: absolute;
   width: 100%;
-  height: 53%;
-  top: 41%;
+  height: 60%;
+  top: 32%;
   background: #000;
   color: #fff;
   box-shadow: 0px 0px 2px #ccc;
@@ -459,7 +465,7 @@ body {
   float: left;
   width: 10%;
   height: 10%;
-  top: 70%;
+  top: 68%;
   color: #000;
   margin-left: 20%;
   left: 10%;
@@ -468,9 +474,65 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 110%;
-  box-shadow: 0px 0px 10px #ccc;
 }
 
 .use_gb_bt {
   background-image: url(../images/use_gb.png);
+}
+
+.use_rj {
+  position: fixed;
+  width: 100%;
+  height: 0%;
+  bottom: 50px;
+  left: 0;
+  transition: all 0.3s steps(60);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 0px 20px #ccc;
+  background: #fff;
+}
+
+.use_rj_im {
+  background-image: url(../images/df_use_gl.png);
+}
+
+.use_rj_body {
+  position: relative;
+  width: 90%;
+  height: 85%;
+  top: 3%;
+  left: 0%;
+  transition: 0.3s steps(60);
+  margin: 0 auto;
+}
+
+.use_rj_user {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  top: -3%;
+}
+
+.use_rj_sex {
+  float: left;
+  width: 37%;
+  left: 5%;
+  margin-left: 5%;
+}
+
+.use_rj_gb {
+  top: 32%;
+  left: 25%;
+}
+
+.use_rj_rs {
+  position: relative;
+  width: 25%;
+  height: 25%;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #606c88, #3f4c6b);
 }
